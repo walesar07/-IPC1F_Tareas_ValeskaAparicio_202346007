@@ -33,6 +33,8 @@ public class Tarea2 {
             }
         }
         procesarMatriz2D(matriz2D);
+    
+        finalizarPrograma();
     }
     
 
@@ -92,5 +94,13 @@ public class Tarea2 {
             System.out.println("| Suma Fila " + (i + 1) + ": " + sumaFila);
         }
         System.out.println("Suma total de la matriz: " + sumaTotal);
+    }
+    
+
+// Método 4: Mostrar mensaje de finalización
+    public static void finalizarPrograma() {
+        System.out.println("\n========================================");
+        System.out.println("   Programa finalizado exitosamente.   ");
+        System.out.println("========================================");
     }
 }
