@@ -24,6 +24,15 @@ public class Tarea2 {
             datos1D[i] = leerEnteroValido(sc, "Ingrese valor " + (i + 1), 1, 100);
         }
         procesarArreglo1D(datos1D);
+        
+        System.out.println("\n--- INGRESO DE DATOS MATRIZ 2D (2x3) ---");
+        int[][] matriz2D = new int[2][3];
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                matriz2D[i][j] = leerEnteroValido(sc, "Matriz [" + i + "][" + j + "]", 1, 100);
+            }
+        }
+        procesarMatriz2D(matriz2D);
     }
     
 
@@ -67,5 +76,21 @@ public class Tarea2 {
         System.out.println("Valor Máximo: " + max);
         System.out.println("Valor Mínimo: " + min);
         System.out.println("Promedio: " + promedio);
+    }
+// Método 3: Procesar y mostrar matriz bidimensional
+    public static void procesarMatriz2D(int[][] matriz) {
+        int sumaTotal = 0;
+
+        System.out.println("\n--- CONTENIDO DE LA MATRIZ (2D) ---");
+        for (int i = 0; i < matriz.length; i++) {
+            int sumaFila = 0;
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + "\t");
+                sumaFila += matriz[i][j];
+                sumaTotal += matriz[i][j];
+            }
+            System.out.println("| Suma Fila " + (i + 1) + ": " + sumaFila);
+        }
+        System.out.println("Suma total de la matriz: " + sumaTotal);
     }
 }
